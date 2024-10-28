@@ -11,12 +11,12 @@ namespace Animal
         public bool IsPoisinous { get; set; } = false;
         private string Owner = "Yes";
         private string Poison = "No";
-        public Snake(string name, string color, int amountOfLegs, int age, bool gotOwner, bool isPoisinous) : base(name, color, amountOfLegs, age, gotOwner)
+        public Snake(string name = "Unknown", string color = "Unknown", int amountOfLegs = 0 , int age = 0 , bool gotOwner = false , bool isPoisinous = false ) : base(name, color, amountOfLegs, age, gotOwner)
         {
             IsPoisinous = isPoisinous;
 
         }
-        public string BoolToString() // To make the true or false to print Yes or No
+        public string BoolToString() // To make the bools print Yes or No instead of true or false
         {
             Owner = (GotOwner) ? "No" : "Yes";
             return Owner;
@@ -45,7 +45,7 @@ namespace Animal
         }
         public override string ToString() 
         {
-            return $"Name: {Name} , Color: {Color} , Legs: {AmountOfLegs} , Age: {Age} , Owner: {Owner} , Poisinous: {IsPoisinous} ";
+            return $"The dogs name is {Name} \n and the fur is the color {Color}.\n {Name} have {AmountOfLegs} legs.\n Are the age of {Age}. \n Have an owner: {Owner}.\n Are poisinous: {Poison}.\n ";
         }
     }
 }

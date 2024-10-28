@@ -9,13 +9,13 @@ namespace Animal
     abstract class Animal
     {
         // 5 egenskaper
-        public string Name { get; set; } = "Name";
-        public string Color { get; set; } = "Color";
+        public string Name { get; set; } = "Unknown";       // You can set a name but if you dont, "Unknown" will be written out
+        public string Color { get; set; } = "Unknown";
         public int AmountOfLegs { get; set; } = 4;
         public int Age { get; set; } = 1;
         public bool GotOwner { get; set; } = true;
 
-        public Animal(string name, string color, int amountOfLegs, int age, bool gotOwner) // Constructor that create the animal
+        public Animal(string name , string color, int amountOfLegs, int age, bool gotOwner) // Constructor that create the animal
         {
             Name         = name;
             Color        = color;

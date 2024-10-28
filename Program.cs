@@ -1,35 +1,41 @@
 ﻿namespace Animal
 {
         // Developer:   Camilla Söderman
-        // Date:        2024-10-10
-        // Class:       .Net24 Fullstack
+        // Date:        2024-10-28
+        // Class:       .Net24 Fullstack .Net
         // Exercise:    Lab 6 OOP Inheritance
     internal class Program
     {
         static void Main(string[] args)
         {
-            Cat cat1 = new Cat("Sotis", "svart", 4, 10, true, 9);
-            Dog dog1 = new Dog("Berit", "brun", 3, 5, true, true);
-           // GrateDane gratedane1 = new GrateDane("Hugo", "Vit", 4, 3, true, true);
-            Snake snake1 = new Snake("Owen","Melerad", 0, 7, false, true);
-
+            var cat1 = new Cat("Sotis", "black", 4, 10, true, 9);
+            var dog1 = new Dog("Berit", "brown", 3, 5, true, true);
+            var dog2 = new Dog(); //Create a dog without specifying information to see the default values.
+            var gratedane1 = new GrateDane("Hugo", "white", 4, 3, true, true);
+            var snake1 = new Snake("Owen" , "multi color", 0, 7, false, true);
+            var cat2 = new Cat();
             
-            gratedane1.Eat();
+            
             Console.WriteLine(cat1);
             Console.WriteLine(dog1);
-           Console.WriteLine(gratedane1);
+            Console.WriteLine(gratedane1);
             Console.WriteLine(snake1);
+            Console.WriteLine(dog2);
             cat1.MakeSound();
             cat1.Eat();
             snake1.Eat();
+            gratedane1.Eat();
+            dog2.Sleep();
 
-            Console.ReadKey();
+            Console.ReadKey();      // Added to have the time to read the output
 
 
 
 
-            // Skriv ut alla djur och make sound mm. och kommentera kod
-            // Lägg till default värdet
+
+
+            
+           
         }
     }
 }

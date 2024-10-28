@@ -9,14 +9,14 @@ namespace Animal
     internal class GrateDane : Dog
     {
         public string? Breed = "Grate Dane";
-        
-        public GrateDane(string name, string color, int amountOfLegs, int age, bool gotOwner, bool gotBone)  : base(name, color, amountOfLegs, age, gotOwner, gotBone)
+
+        public GrateDane(string name = "Unknown" , string color = "Unknown" , int amountOfLegs = 0 , int age = 0 , bool gotOwner = false , bool gotBone = false) : base(name, color, amountOfLegs, age, gotOwner, gotBone)
         {
 
 
         }
 
-        public string BoolToString() // To make the true or false to print Yes or No
+        public override string BoolToString() // To make the bools print Yes or No instead of true or false
         {
             return base.BoolToString();
 
@@ -43,7 +43,7 @@ namespace Animal
         }
         public override string ToString() 
         {
-            return $"Name: {Name} , Color: {Color} , Legs: {AmountOfLegs} , Age: {Age} , Owner: {Owner} , Bone: {Bone} , Breed: {Breed } ";
+            return $"The dogs name is {Name} \n and the fur is the color {Color}.\n {Name} have {AmountOfLegs} legs.\n Are the age of {Age}. \n Have an owner: {Owner}.\n Have got a bone: {Bone}.\n And is a {Breed }.\n";
         }
     }
 }

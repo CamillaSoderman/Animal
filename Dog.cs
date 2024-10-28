@@ -9,18 +9,18 @@ using System.Xml.Linq;
 
 namespace Animal
 {
-    internal class Dog : Animal
+    internal class Dog : Animal         // Class Dog inherits from Animal
     {
         public bool GotBone { get; set; } = false;
         public string Bone = "No";
         public string Owner = "Yes";
 
-        public Dog(string name, string color, int amountOfLegs, int age, bool gotOwner, bool gotBone) : base(name, color, amountOfLegs, age, gotOwner)
+        public Dog(string name = "Unknown" , string color = "Unknown" , int amountOfLegs = 0 , int age = 0 , bool gotOwner = false , bool gotBone = false ) : base(name, color, amountOfLegs, age, gotOwner)
         {
             GotBone = gotBone;
 
         }
-        public string BoolToString() // To make the true or false to print Yes or No
+        public virtual string BoolToString() // To make the bools print Yes or No instead of true or false
         {
             Owner = (GotOwner) ? "No" : "Yes";
             return Owner;
@@ -51,7 +51,7 @@ namespace Animal
 
         public override string ToString() 
         {
-            return $"Name: {Name} , Color: {Color} , Legs: {AmountOfLegs} , Age: {Age} , Owner: {GotOwner} , Bone: {Bone} ";
+            return $"The dogs name is {Name} \n and the fur is the color {Color}.\n {Name} have {AmountOfLegs} legs.\n Are the age of {Age}. \n Have an owner: {Owner}.\n Have got a bone: {Bone}.\n ";
         }
 
     }
